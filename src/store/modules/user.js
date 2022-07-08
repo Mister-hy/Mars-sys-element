@@ -1,4 +1,4 @@
-import { login, getAuthority } from '@/api/user'
+import { login } from '@/api/user'
 import { setItem, getItem } from '@/utils/storage'
 
 export default {
@@ -10,18 +10,23 @@ export default {
   mutations: {
     SET_USER_INFO(state, res) {
       state.userInfo = res
+      console.log(state.userInfo.token)
       setItem('userInfo', res)
     }
   },
   actions: {
-    async handleLogin({ commit }, params) {
+    async setLogin({ commit }, params) {
       const res = await login(params)
-      // console.log(res)
       commit('SET_USER_INFO', res)
-    },
-    async handleAuthority({ commit }) {
-      const res = await getAuthority()
-      console.log(res)
     }
+    // async handleLogin({ commit }, params) {
+    //   const res = await login(params)
+    //   // console.log(res)
+    //   commit('SET_USER_INFO', res)
+    // },
+    // async handleAuthority({ commit }) {
+    //   const res = await getAuthority()
+    //   console.log(res)
+    // }
   }
 }
