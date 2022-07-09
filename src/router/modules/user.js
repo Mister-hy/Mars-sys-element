@@ -7,14 +7,14 @@ export default {
   name: 'user-quer',
   meta: {
     title: '系统管理',
-    icon: ''
+    icon: 'Apple'
   },
   children: [
     {
       path: '/system/user',
       meta: {
         title: '用户管理',
-        icon: ''
+        icon: 'Apple'
       },
       component: () => import('../../views/user/index.vue')
     }

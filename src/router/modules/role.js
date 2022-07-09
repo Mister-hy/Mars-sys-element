@@ -7,14 +7,14 @@ export default {
   name: 'role-query',
   meta: {
     title: '角色管理',
-    icon: ''
+    icon: 'AlarmClock'
   },
   children: [
     {
       path: '/system/role',
       meta: {
         title: '角色管理',
-        icon: ''
+        icon: 'AlarmClock'
       },
       component: () => import('../../views/role/index.vue')
     }

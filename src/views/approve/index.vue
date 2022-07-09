@@ -1,10 +1,7 @@
 <template>
-    <div class=''>待审批</div>
+  <div class="">待审批</div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
-<style lang='scss' scoped>
-
-</style>
+<style lang="scss" scoped></style>

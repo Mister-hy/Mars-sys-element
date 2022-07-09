@@ -7,14 +7,14 @@ export default {
   name: 'leave-query',
   meta: {
     title: '审批管理',
-    icon: ''
+    icon: 'Aim'
   },
   children: [
     {
       path: '/audit/leave',
       meta: {
         title: '休假管理',
-        icon: ''
+        icon: 'Aim'
       },
       component: () => import('../../views/leave/index.vue')
     }

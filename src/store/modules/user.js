@@ -10,7 +10,7 @@ export default {
   mutations: {
     SET_USER_INFO(state, res) {
       state.userInfo = res
-      console.log(state.userInfo.token)
+      // console.log(state.userInfo.token)
       setItem('userInfo', res)
     }
   },

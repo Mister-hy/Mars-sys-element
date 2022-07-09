@@ -4,6 +4,7 @@ import menu from './modules/menu'
 import role from './modules/role'
 import dept from './modules/dept'
 import leave from './modules/leave'
+import approve from './modules/approve'
 export const Publicroutes = [
   // {
   //   path: '/login',
@@ -28,7 +29,7 @@ export const Publicroutes = [
     ]
   }
 ]
-const privateRouters = [dept, leave, menu, role, user]
+const privateRouters = [dept, leave, menu, role, user, approve]
 export const privateRoutes = []
 
 const router = createRouter({

@@ -8,31 +8,19 @@
     text-color="#fff"
     router
   >
-    <el-sub-menu index="1">
-      <template #title>
-        <el-icon><location /></el-icon>
-        <span>系统管理</span>
-      </template>
-      <el-menu-item index="/system/user">用户管理</el-menu-item>
-      <el-menu-item index="/system/menu">菜单管理</el-menu-item>
-      <el-menu-item index="/system/role">角色管理</el-menu-item>
-      <el-menu-item index="/system/dept">部门管理</el-menu-item>
-    </el-sub-menu>
-    <el-sub-menu index="2">
-      <template #title>
-        <el-icon><location /></el-icon>
-        <span>审批管理</span>
-      </template>
-      <el-menu-item index="/audit/leave">休假申请</el-menu-item>
-      <el-menu-item index="2-2">待审批</el-menu-item>
-    </el-sub-menu>
+    <MenuProrsItem v-for="item in menuList" :key="item" :data="item"></MenuProrsItem>
   </el-menu>
 </template>
 
 <script setup>
 import { useRouter } from 'vue-router'
+import { getParenRouter, getMenus } from '../../utils/menu.js'
+import MenuProrsItem from './menuProrsItem.vue'
 const router = useRouter()
-console.log(router.getRoutes())
+
+const menuList = getMenus(getParenRouter(router.getRoutes()))
+// console.log(menuList)
+// console.log(getMenus(getParenRouter(router.getRoutes())))
 </script>
 
 <style lang="scss" scoped>
